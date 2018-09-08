@@ -1,0 +1,172 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+body {
+  font-size: 12px;
+  font-family: monospace;
+  color:inherit;
+}
+
+
+header,
+section,
+div,
+footer {
+  box-sizing: border-box;
+}
+
+/*page header*/
+
+.page-header {
+  width: 100%;
+}
+
+.inner-header {
+  width: 100%;
+  padding-top: 10px;
+
+}
+
+.profile-pic {
+  border-radius: 70px;
+}
+
+.intro-summary {
+  float: right;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.name {
+  font-size: 48px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.description {
+  margin-top: 5px;
+}
+
+/* horizontal line*/
+
+hr {
+  height: 5px;
+  background-color: lightsteelblue;
+  border: 0;
+}
+
+/* main tag*/
+
+.main-content {
+  width: 100%;
+}
+
+/* background image for feature project, div tag*/
+
+
+.featured-question {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: calc(100vw / 5);
+}
+
+/* featured skills section */
+/* below style is common to all projects class children*/
+
+.featured-skills {
+  width: 100%;
+}
+
+/*featured-skills heading*/
+
+.featured-heading {
+  text-align: left;
+  font-weight: 500;
+  font-size: 2.6em;
+}
+
+.questions {
+  width:100%;
+}
+
+.proj-header {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  transition: letter-spacing .3s;
+  margin-bottom: 13px;
+}
+.proj-list-container {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: unset;
+  overflow-x: scroll;
+}
+
+.proj-item {
+  width: 300px;
+  height: 225px;
+  transition: width .6s;
+  background-color: #c3cfef;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.proj-img {
+    width: 300px;
+    transition: width .6s;
+    height: 170px;
+    border: 1px solid red;
+}
+
+/* transition effect for proj-tem and proj-img*/
+
+.question-body,
+.question-img {
+  transition: width .6s;
+}
+
+.question-title {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 19px;
+  margin-bottom: 5px;
+}
+
+.proj-name:hover {
+  cursor: pointer;
+}
+
+.gitHub-link {
+  display: block;
+  text-align: center;
+}
+
+
+/*footer for page*/
+
+.page-footer {
+  width: 100%;
+}
+
+.social-links-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 50px;
+  margin-bottom: 5px;
+  padding:10px;
+  border: 1px solid none;
+  border-radius:10px;
+  background-color:#e1e6e6;
+}
