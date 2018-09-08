@@ -1,0 +1,70 @@
+
+/*page header */
+
+.inner-header {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 124px;
+  transition: width .3s;
+}
+
+.intro-summary {
+  width: 100%;
+  margin-top: 0;
+  text-align: center;
+  float: none;
+}
+
+.name {
+  font-size: 28px;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.description {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.name,
+.description {
+  transition: font-size .3s;
+}
+/* project heading
+* project-list container and
+* project-item and
+* project-item children
+*/
+
+.proj-header {
+  font-weight: normal;
+  letter-spacing: 3px;
+  transition: letter-spacing .3s;
+}
+
+.proj-item {
+  width: 200px;
+  height: 160px;
+}
+
+.proj-img {
+  width: 200px;
+  height: 100px;
+}
+
+/*transition effect for proj-item and proj-img width*/
+
+.proj-item,
+.proj-img {
+  transition: width .6s;
+}
+.proj-name {
+  letter-spacing: 3px;
+}
+
+.gitHub-link {
+  font-size: 19px;
+  letter-spacing: 2px;
+}

@@ -1,0 +1,14 @@
+
+/*style for medium screen size min-width:600px max-width:750px*/
+
+.profile-pic {
+  width: 150px;
+}
+
+.name {
+  font-size: 32px;
+}
+
+.description {
+  font-size: 1.2em;
+}
