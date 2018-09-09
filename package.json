@@ -1,0 +1,29 @@
+{
+  "name": "fetch-api-client",
+  "version": "1.0.0",
+  "description": "an api client for making api request to backend with fetch and async",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelNgiri/Fetch-API-Client.git"
+  },
+  "keywords": [
+    "fetch",
+    "api",
+    "javascript",
+    "fetch"
+  ],
+  "author": "michael Ngiri\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[M",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelNgiri/Fetch-API-Client/issues"
+  },
+  "homepage": "https://github.com/michaelNgiri/Fetch-API-Client#readme",
+  "dependencies": {
+    "fs": "0.0.1-security"
+  }
+}
