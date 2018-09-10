@@ -139,31 +139,9 @@ footer {
   transition: letter-spacing .3s;
   margin-bottom: 13px;
 }
-.proj-list-container {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
-  justify-content: unset;
-  overflow-x: scroll;
-}
 
-.proj-item {
-  width: 300px;
-  height: 225px;
-  transition: width .6s;
-  background-color: #c3cfef;
-  margin-left: 5px;
-  margin-bottom: 5px;
-}
 
-.proj-img {
-    width: 300px;
-    transition: width .6s;
-    height: 170px;
-    border: 1px solid red;
-}
-
-/* transition effect for proj-tem and proj-img*/
+/* transition effect */
 
 .question-body,
 .question-img {
@@ -177,9 +155,6 @@ footer {
   margin-bottom: 5px;
 }
 
-.proj-name:hover {
-  cursor: pointer;
-}
 
 .gitHub-link {
   display: block;
@@ -193,15 +168,3 @@ footer {
   width: 100%;
 }
 
-.social-links-container {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  margin-top: 50px;
-  margin-bottom: 5px;
-  padding:10px;
-  border: 1px solid ;
-  border-radius:10px;
-  background-color:#e1e6e6;
-}

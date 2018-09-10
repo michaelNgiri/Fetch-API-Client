@@ -1,6 +1,6 @@
 const authText =  document.getElementById('auth-text');
 let Authorization,
-    userId,
+    userId=1,
     questionId ,
     answerId;
 

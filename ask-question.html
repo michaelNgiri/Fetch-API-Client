@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>StackOverflow Lite</title>
+    <title>StackOverflow Lite| Ask a question</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/question.css">
     <link rel="stylesheet" media="screen and (min-width: 850px)" href="css/bpmin850.css">
     <link rel="stylesheet" media="screen and (min-width: 200px) and (max-width: 700px)" href="css/small_screen.css">
     <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 700px)" href="css/medium_screen.css">
@@ -27,10 +28,23 @@
         </div>
     </div>
 </header>
+<hr class="hr">
+<div class="question-link">
+    <h3>Ask a question</h3>
+    <form method="post" onsubmit="return false" class="ask-question-form">
+        <label for="ask-question-title">Title</label><br>
+        <input type="text" name="question_title" id="ask-question-title"><br>
+        <label for="ask-question-body">Enter your Question here:</label><br>
+        <textarea name="question" id="ask-question-body" aria-invalid="false"> </textarea>
+        <input type="hidden" name="user_id" id="featured-question-id"><br>
+        <button onclick="submitQuestion()">Submit</button>
+    </form>
+</div>
 
 
 <script  type="text/javascript" src="scripts/queries.js"></script>
-<script  type="text/javascript" src="scripts/app.js"></script>
+<script  type="text/javascript" src="scripts/questions.js"></script>
+<!--<script  type="text/javascript" src="scripts/app.js"></script>-->
 <script defer type="text/javascript" src="scripts/misc.js"></script>
 </body>
 </html>
