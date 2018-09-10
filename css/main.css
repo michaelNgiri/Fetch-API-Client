@@ -95,7 +95,15 @@ footer {
 .featured-skills {
   width: 100%;
 }
-
+.menus{
+    display: inline-flex; list-style: none; text-decoration: none;
+}
+.login-form{
+    float: contour;
+    text-align: center;
+    border: 24px solid whitesmoke;
+    border-radius: 10%;
+}
 /*featured-skills heading*/
 
 .featured-heading {

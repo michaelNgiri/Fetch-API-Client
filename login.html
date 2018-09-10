@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>StackOverflow Lite</title>
+    <title>StackOverflow Lite| Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
@@ -16,7 +16,7 @@
 <header class="page-header">
     <div class="inner-header">
         <!--<img id="avatar" src="img/avatar.jpg" alt="profile photo">-->
-        <img class="profile-pic" src="img/avatar.jpg" alt="profile photo">
+        <a href="https://devpool-client.herokuapp.com/"><img class="profile-pic" src="img/avatar.jpg" alt="profile photo"></a>
         <div class="intro-summary">
             <ul style="display: inline-flex; list-style: none; text-decoration: none;">
                 <li role="menuitem"><a href="profile.html"><span class="menu-item">My Profile</span></a></li>
@@ -27,10 +27,21 @@
         </div>
     </div>
 </header>
+<div class="login-form">
+    <form onsubmit="return false" method="post" >
+        <label>Email:<br>
+            <input id="email" type="email" name="email">
+        </label><br>
+        <label>Password:<br>
+            <input id="password" type="password" name="password">
+        </label><br>
+        <button onclick="submitLogin()">Submit</button>
+    </form>
+</div>
 
 
 <script  type="text/javascript" src="scripts/queries.js"></script>
-<script  type="text/javascript" src="scripts/app.js"></script>
 <script defer type="text/javascript" src="scripts/misc.js"></script>
+<script defer type="text/javascript" src="scripts/auth.js"></script>
 </body>
 </html>

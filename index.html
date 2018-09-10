@@ -16,15 +16,15 @@
   <header class="page-header">
     <div class="inner-header">
         <!--<img id="avatar" src="img/avatar.jpg" alt="profile photo">-->
-      <img class="profile-pic" src="img/avatar.jpg" alt="profile photo">
+        <a href="https://devpool-client.herokuapp.com/"><img class="profile-pic" src="img/avatar.jpg" alt="profile photo"></a>
       <div class="intro-summary">
         <p class="name"><!--heading-->
-          <ul style="display: inline-flex; list-style: none; text-decoration: none;">
-              <li role="menuitem"><a href=""><span class="menu-item">My Profile</span></a></li>
-              <li><a href=""><span class="menu-item">Ask a question</span></a></li>
-              <li><a href=""><span class="menu-item">My Questions</span></a></li>
+          <ul class="menus">
+              <li role="menuitem"><a href="profile.html"><span class="menu-item">My Profile</span></a></li>
+              <li><a href="ask-question.html"><span class="menu-item">Ask a question</span></a></li>
+              <li><a href="my-questions.html"><span class="menu-item">My Questions</span></a></li>
+              <li><a href="login.html"><span class="menu-item" id="auth-text"></span></a></li>
           </ul>
-         </p>
       </div>
     </div>
   </header>
@@ -46,7 +46,8 @@
     <div class="answer-link">
         <h3>Answer this question</h3>
         <form action="https://dev-pool.herokuapp.com/api/v1/questions/answers" method="post" class="answer-form">
-                  <textarea>
+            <label for="question_body">Enter your Question here</label>
+                  <textarea name="question" id="question_body">
                       type your answer here...
                   </textarea>
             <input type="hidden" name="user_id" id="featured-question-owner-id">
@@ -65,8 +66,7 @@
     <!--All featured skills-->
     <section class="featured-skills">
      
-     
-<button onclick="signup()">Register</button>
+
     </section>
   </main>
 
