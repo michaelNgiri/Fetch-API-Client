@@ -17,14 +17,50 @@
     <div class="inner-header">
       <img class="profile-pic" src="img/logo2.png" alt="">
       <div class="intro-summary">
-        <p class="name">StackOverflow-Lite</p>
+        <p class="name"><!--heading-->
+          <ul style="display: inline-flex; list-style: none; text-decoration: none;">
+              <li>My Profile</li>
+              <li>Ask</li>
+              <li>My Questions</li>
+          </ul>
+         </p>
       </div>
     </div>
   </header>
 
   <!---->
   <hr>
+<section>
 
+    <h2 style="float: right;">
+
+    </h2>
+        <!--heading-->
+        <!--<h2 class="featured-heading">Featured question</h2>-->
+        <h1 class="featured-question-title">What is fetch?</h1>
+        <div>
+               <pre class="featured-question-body">
+                    The Fetch API is a simple interface for fetching resources. Fetch makes it easier to make web requests and handle responses than with the older XMLHttpRequest, which often requires additional logic (for example, for handling redirects).
+
+                    Note: Fetch supports the Cross Origin Resource Sharing (CORS). Testing generally requires running a local server. Note that although fetch does not require HTTPS, service workers do and so using fetch in a service worker requires HTTPS. Local servers are exempt from this.
+                    You can check for browser support of fetch in the window interface. For example:
+
+                    main.js
+                    if (!('fetch' in window)) {
+                      console.log('Fetch API not found, try including the polyfill');
+                      return;
+                    }
+                    // We can safely use fetch from now on
+                    There is a polyfill for browsers that are not currently supported (but see the readme for important caveats.).
+
+                    The fetch() method takes the path to a resource as input. The method returns a promise that resolves to the Response of that request.
+
+                    Making a request
+                    Let's look at a simple example of fetching a JSON file:
+            </pre>
+        </div>
+</section>
+  <hr>
   <!--main content-->
   <main class="main-content">
 
@@ -33,13 +69,9 @@
     </div>
     <!--All featured skills-->
     <section class="featured-skills">
-      <!--heading-->
-      <h2 class="featured-heading">Featured question</h2>
-
-      <!--container for front end projects.-->
-
      
-
+     
+<button onclick="signup()">Register</button>
     </section>
   </main>
 
@@ -47,10 +79,9 @@
 
   <footer class="page-footer">
     <!--container for social links-->
-    
-    </div>
+
   </footer>
-  <script  type="text/javascript" src="scripts/authentication.js"></script>
+  <script  type="text/javascript" src="scripts/queries.js"></script>
   <script  type="text/javascript" src="scripts/app.js"></script>
   <script defer type="text/javascript" src="scripts/misc.js"></script>
 </body>

@@ -13,6 +13,9 @@ body {
   color:inherit;
 }
 
+.featured-question-title{
+  font-size: 1.4em; background-color:#f3f3f3; padding: 1em;
+}
 
 header,
 section,
@@ -26,7 +29,10 @@ footer {
 .page-header {
   width: 100%;
 }
-
+.featured-question-body{
+    white-space: pre-wrap;
+    font-family: 'Yu Gothic UI', serif; font-size: 1.5em; justify-content:center; text-justify: inter-cluster;
+}
 .inner-header {
   width: 100%;
   padding-top: 10px;
@@ -90,6 +96,7 @@ hr {
   text-align: left;
   font-weight: 500;
   font-size: 2.6em;
+    float: right;
 }
 
 .questions {
@@ -166,7 +173,7 @@ hr {
   margin-top: 50px;
   margin-bottom: 5px;
   padding:10px;
-  border: 1px solid none;
+  border: 1px solid ;
   border-radius:10px;
   background-color:#e1e6e6;
 }
