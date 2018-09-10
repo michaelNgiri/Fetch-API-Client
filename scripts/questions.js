@@ -5,7 +5,7 @@ function submitQuestion(){
     console.log(question);
     console.log(Authorization);
     const body =  'question_title'+'='+title+'&'+'question'+'='+question+'&id'+'=1'+'&Authorization'+'='+Authorization;
-    const url = "http://localhost:3000/api/v1/questions";
+    const url = "https://dev-pool.herokuapp.com/api/v1/questions";
     postQuery(url, body)
 }
 
@@ -50,7 +50,7 @@ fetch(url).then(response => {
 });
 
 function fetchAllQuestions(){
-    fetch('http://localhost:3000/api/v1/questions/').then(response => {
+    fetch('http://https://dev-pool.herokuapp.com/api/v1/questions/').then(response => {
         return response.json();
     }).then(data => {
         // Work with JSON data here

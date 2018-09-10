@@ -4,7 +4,7 @@ function submitLogin(){
     //console.log(x);
    // console.log(y);
     const body =  'email'+'='+y+'&'+'password'+'='+x;
-    const url = "http://localhost:3000/api/v1/auth/login";
+    const url = "https://dev-pool.herokuapp.com/api/v1/auth/login";
     //console.log(body);
     //const data = {"email":y, password:x};
     postQuery(url, body)
