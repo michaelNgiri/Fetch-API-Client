@@ -1,4 +1,4 @@
-function getQuery() {
+function getQuery(url, data) {
   if (!('fetch' in window)) {
   console.log('Fetch API not found, try including the polyfill');
   alert('fetch is disabled in your browser');
@@ -9,8 +9,11 @@ function getQuery() {
         return response.json();
     }).then(data => {
         // Work with JSON data here
-        console.log(data[1]['id']);
+        console.log(data[0]['title']);
+        console.log(data[0]['id']);
+        return data;
     }).catch(err => {
+        console.log(err);
         // Do something for an error here
     });
 }
@@ -45,4 +48,8 @@ function postQuery(url, data) {
         console.log(err);
         // Do something for an error here
     });
+}
+
+function fetchQuestionId(){
+    return document.getElementById('featured-question-id').textContent();
 }

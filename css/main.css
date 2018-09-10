@@ -1,3 +1,8 @@
+a:-webkit-any-link {
+    color: #000000;
+    cursor: grab;
+    text-decoration: none;
+}
 html,
 body {
   margin: 0;
@@ -55,15 +60,13 @@ footer {
   margin-top: 0;
 }
 
-.description {
-  margin-top: 5px;
-}
+
 
 /* horizontal line*/
 
-hr {
+.hr {
   height: 5px;
-  background-color: lightsteelblue;
+  background-color: lightseagreen;
   border: 0;
 }
 
@@ -75,7 +78,10 @@ hr {
 
 /* background image for feature project, div tag*/
 
-
+#avatar{
+    border-radius: 50%;
+    object-position: top;
+}
 .featured-question {
   width: 100%;
   background-size: contain;
@@ -98,7 +104,21 @@ hr {
   font-size: 2.6em;
     float: right;
 }
-
+.menu-item{
+    padding: 1em;
+    border: 1px solid cornsilk;
+    font-size: 1.2em;
+    font-family: "Droid Sans Mono Slashed", serif;
+    cursor: grab;
+    text-decoration: none;
+    text-underline: none;
+}
+.menu-item:hover{
+    color: lightseagreen;
+    border-radius: 1.4em;
+    text-decoration: none;
+    text-underline: none;
+}
 .questions {
   width:100%;
 }
