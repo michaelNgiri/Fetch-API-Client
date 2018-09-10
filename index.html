@@ -46,12 +46,11 @@
     <div class="answer-link">
         <h3>Answer this question</h3>
         <form action="https://dev-pool.herokuapp.com/api/v1/questions/answers" method="post" class="answer-form">
-            <label for="question_body">Enter your Question here</label>
+            <label for="question_body">Enter your Answer here:</label><br>
                   <textarea name="question" id="question_body">
-                      type your answer here...
                   </textarea>
             <input type="hidden" name="user_id" id="featured-question-owner-id">
-            <input type="hidden" name="user_id" id="featured-question-id">
+            <input type="hidden" name="user_id" id="featured-question-id"><br>
             <button type="submit">Submit</button>
         </form>
     </div>
