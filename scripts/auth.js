@@ -36,3 +36,42 @@ function postQuery(url, body) {
         // Do something for an error here
     });
 }
+
+function submitSignup(){
+    const firstName = document.getElementById('reg-first_name').value.toString().trim();
+    const lastName = document.getElementById('reg-last_name').value.toString().trim();
+    const x = document.getElementById('reg-password').value.toString().trim();
+    const y = document.getElementById('reg-email').value.toString().trim();
+    //console.log(x);
+    // console.log(y);
+    const body =  'email'+'='+y+'&'+'password'+'='+x+'&'+'first_name'+'='+firstName+'&'+'last_name'+'='+lastName;
+    const url = "http://dev-pool.herokuapp.com/api/v1/auth/signup";
+    console.log(body);
+    //const data = {"email":y, password:x};
+    postSignupQuery(url, body)
+}
+function postSignupQuery(url, body) {
+    if (!('fetch' in window)) {
+        console.log('Fetch API not found, try including the polyfill');
+        alert('fetch is disabled in your browser');
+        return;
+    }
+    fetch(url,
+        {
+            method: 'post',
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body:body
+        })
+        .then(response => {
+            alert('Registration succesful');
+            return response.json();
+        }).then(data => {
+        alert('Registration succesful');
+        authText.innerText="Logout";
+    }).catch(err => {
+        console.log(err);
+
+    });
+}

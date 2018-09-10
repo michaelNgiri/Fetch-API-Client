@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>StackOverflow Lite| Login</title>
+    <title>StackOverflow Lite| Signup</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
@@ -24,20 +24,26 @@
                 <li><a href="my-questions.html"><span class="menu-item">My Questions</span></a></li>
                 <li><a href="all-questions.html"><span class="menu-item">All Questions</span></a></li>
                 <li><a href="login.html"><span class="menu-item" id="auth-text"></span></a></li>
-                <li><a href="signup.html.html"><span class="menu-item" id="auth-signup-text">Register</span></a></li>
+                <li><a href="signup.html"><span class="menu-item" id="auth-signup-text">Register</span></a></li>
             </ul>
         </div>
     </div>
 </header>
 <div class="login-form">
     <form onsubmit="return false" method="post" >
+        <label>First Name:<br>
+            <input id="reg-first_name" type="text" name="first_name">
+        </label><br>
+        <label>Last Name:<br>
+            <input id="reg-last_name" type="text" name="first_name">
+        </label><br>
         <label>Email:<br>
-            <input id="email" type="email" name="email">
+            <input id="reg-email" type="email" name="email">
         </label><br>
         <label>Password:<br>
-            <input id="password" type="password" name="password">
+            <input id="reg-password" type="password" name="reg=-password">
         </label><br>
-        <button onclick="submitLogin()">Submit</button>
+        <button onclick="submitSignup()">Submit</button>
     </form>
 </div>
 
