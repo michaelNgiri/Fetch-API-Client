@@ -139,7 +139,9 @@ footer {
   transition: letter-spacing .3s;
   margin-bottom: 13px;
 }
-
+.menu-items-ul{
+    display: inline-flex; list-style: none; text-decoration: none;
+}
 
 /* transition effect */
 

@@ -1,4 +1,5 @@
 const url = 'https://dev-pool.herokuapp.com/api/v1/questions/recent';
+//const url = 'http://localhost:3000/api/v1/questions/recent';
 
 document.addEventListener("DOMContentLoaded", function(){
     fetch(url).then(response => {
