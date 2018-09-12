@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e65cc8b9-2361-482b-959d-616708d3f354" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/scripts/all-questions.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/Fetch-API-Client.iml" afterPath="$PROJECT_DIR$/.idea/Fetch-API-Client.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/all-questions.html" afterPath="$PROJECT_DIR$/all-questions.html" />
-      <change beforePath="$PROJECT_DIR$/ask-question.html" afterPath="$PROJECT_DIR$/ask-question.html" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change beforePath="$PROJECT_DIR$/login.html" afterPath="$PROJECT_DIR$/login.html" />
-      <change beforePath="$PROJECT_DIR$/my-questions.html" afterPath="$PROJECT_DIR$/my-questions.html" />
-      <change beforePath="$PROJECT_DIR$/profile.html" afterPath="$PROJECT_DIR$/profile.html" />
-      <change beforePath="$PROJECT_DIR$/scripts/app.js" afterPath="$PROJECT_DIR$/scripts/app.js" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/scripts/all-questions.js" afterPath="$PROJECT_DIR$/scripts/all-questions.js" />
+      <change beforePath="$PROJECT_DIR$/sw/sw.js" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,23 +30,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sw.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sw/sw.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="signup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/signup.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+              <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1536697794663" expanded="true" signature="1710:2311" ph="..." />
               </folding>
             </state>
           </provider>
@@ -61,7 +48,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
               <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-              <folding />
+              <folding>
+                <marker date="1536697774493" expanded="true" signature="1660:2005" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,7 +59,7 @@
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="371">
-              <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,11 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all-questions.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="all-questions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/all-questions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="119">
+              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -162,8 +161,8 @@
         <option value="$PROJECT_DIR$/my-questions.html" />
         <option value="$PROJECT_DIR$/profile.html" />
         <option value="$PROJECT_DIR$/ask-question.html" />
-        <option value="$PROJECT_DIR$/scripts/all-questions.js" />
         <option value="$PROJECT_DIR$/all-questions.html" />
+        <option value="$PROJECT_DIR$/scripts/all-questions.js" />
       </list>
     </option>
   </component>
@@ -175,10 +174,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/node_modules" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -264,10 +260,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34987000" />
+    <option name="totallyTimeSpent" value="36279000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -490,9 +486,10 @@
     <entry file="file://$PROJECT_DIR$/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <caret line="39" column="11" lean-forward="false" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1536697794663" expanded="true" signature="1710:2311" ph="..." />
           </folding>
         </state>
       </provider>
@@ -501,14 +498,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding />
+          <folding>
+            <marker date="1536697774493" expanded="true" signature="1660:2005" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
-          <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -549,8 +548,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/all-questions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="119">
+          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
