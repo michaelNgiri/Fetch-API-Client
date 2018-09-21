@@ -170,3 +170,6 @@ footer {
   width: 100%;
 }
 
+.answer-link{
+	visibility: hidden;
+}
