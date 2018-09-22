@@ -31,9 +31,13 @@ console.log(questionId);
  const answer = document.getElementById('answer-body').value;
  console.log(answer);
 
-const answerUrl = baseUrl+'questions/answers';
+ const answerUrl = baseUrl+'questions/answers';
 const queryBody = 'question_id='+questionId+'&user_id='+userId+'&answer='+answer;
 console.log(queryBody);
+
+//check if valid characters are entered in answer text
+ if (typeof answer === "string" && answer.trim().length >= 5) {
+
 
 fetch(answerUrl,
         {
@@ -53,10 +57,15 @@ fetch(answerUrl,
             document.getElementById('answer-again').style.visibility='visible';
             document.getElementById('answer-title').style.visibility='hidden';
             const answerStatus = document.getElementById('answer-status');
-            answerStatus.innerHTML = 'your Answer was saved succesfully';
-            answerStatus.style.visibility='visible';
+                    answerStatus.innerHTML = 'your Answer was saved succesfully';
+                    answerStatus.style.color='green';  
+                    answerStatus.style.visibility='visible';
             }else{
-               alert('could not save your question');
+               document.getElementById('answer-status').style.color='red';
+               document.getElementById('answer-body').style.border='1px solid red';
+               const answerStatus = document.getElementById('answer-status'); 
+                        answerStatus.innerHTML = 'Failed to save! try again';
+                        answerStatus.style.visibility='visible';
             }
         // Work with JSON data here
         console.log(data['message']);
@@ -66,7 +75,16 @@ fetch(answerUrl,
     });
 
 console.log(answerUrl);
+
+}else{
+    console.log('invalid answer text');
+    const answerStatus = document.getElementById('answer-status');
+            answerStatus.innerHTML = 'please type at least 5 characters';
+            answerStatus.style.color='orange';
+            answerStatus.style.visibility='visible';
 }
+}
+
 
 function showAnswerForm(){
     document.getElementById('answer-form').style.visibility='visible';

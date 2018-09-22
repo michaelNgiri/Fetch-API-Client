@@ -182,3 +182,6 @@ footer {
 	visibility: hidden;
 	background: grey;
 }
+.error{
+	color: red;
+}
