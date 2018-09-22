@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }).then(data => {
         // Work with JSON data here
         console.log(data[0]);
+        document.getElementById('loading').style.visibility='hidden';
         document.getElementById('featured-question-title').innerHTML=data[0]['question_title'];
         document.getElementById('featured-question-body').innerHTML=data[0]['question_body'];
         document.getElementById('featured-question-id').setAttribute('value', data[0]['id']);
