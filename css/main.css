@@ -185,3 +185,8 @@ footer {
 .error{
 	color: red;
 }
+#answer-body{
+	width: 80vw;
+	height: 4em;
+	border-radius: 20px;
+}

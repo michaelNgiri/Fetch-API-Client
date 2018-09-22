@@ -1,5 +1,5 @@
-//const baseUrl = 'http://localhost:3000/api/v1/';
-const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
+const baseUrl = 'http://localhost:3000/api/v1/';
+//const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
 
 function submitLogin(){
     const x = document.getElementById('password').value.toString().trim();
@@ -31,8 +31,8 @@ function postQuery(url, body) {
             return response.json();
         }).then(data => {
         // Work with JSON data here
-        Authorization = data.Authorization;
-        console.log(Authorization);
+        Window.Authorization = data.Authorization;
+        console.log(Window.Authorization);
         authText.innerText="Logout";
     }).catch(err => {
         console.log(err);

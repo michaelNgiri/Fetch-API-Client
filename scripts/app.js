@@ -1,5 +1,7 @@
-const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
-//const baseUrl = 'http://localhost:3000/api/v1/';
+//const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
+const baseUrl = 'http://localhost:3000/api/v1/';
+const authorization = Window.Authorization
+//"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoibWljaGFlbG5naXJpQGdtYWlsLmNvbSIsImlkIjoxMn0sImlhdCI6MTUzNzYxOTI5OSwiZXhwIjoxNTM3NjQ5Mjk5fQ.Ssrjp6R4GdbRE0CMzZ0HvgV2O73f2hhS9AgCts-GIXI"
 document.addEventListener("DOMContentLoaded", function(){
     fetch(baseUrl+'questions/recent').then(response => {
         return response.json();
@@ -45,7 +47,7 @@ fetch(answerUrl,
             method: 'post',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                "authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoibWljaGFlbG5naXJpQGdtYWlsLmNvbSIsImlkIjoxMn0sImlhdCI6MTUzNzYxOTI5OSwiZXhwIjoxNTM3NjQ5Mjk5fQ.Ssrjp6R4GdbRE0CMzZ0HvgV2O73f2hhS9AgCts-GIXI"
+                "authorization": authorization
             },
             body: queryBody
         })
@@ -65,7 +67,7 @@ fetch(answerUrl,
                document.getElementById('answer-status').style.color='red';
                document.getElementById('answer-body').style.border='1px solid red';
                const answerStatus = document.getElementById('answer-status'); 
-                        answerStatus.innerHTML = 'Failed to save! try again';
+                        answerStatus.innerHTML = 'Failed to save! Login and try again';
                         answerStatus.style.visibility='visible';
             }
         // Work with JSON data here
