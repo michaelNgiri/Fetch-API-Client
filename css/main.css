@@ -173,3 +173,8 @@ footer {
 .answer-link{
 	visibility: hidden;
 }
+#answer-status{
+	background: #f3f3f3;
+	visibility: hidden;
+	color: green;
+}

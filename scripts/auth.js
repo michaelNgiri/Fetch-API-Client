@@ -1,10 +1,13 @@
+const baseUrl = 'http://localhost:3000/api/v1/';
+//const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
+
 function submitLogin(){
     const x = document.getElementById('password').value.toString().trim();
     const y = document.getElementById('email').value.toString().trim();
     //console.log(x);
    // console.log(y);
     const body =  'email'+'='+y+'&'+'password'+'='+x;
-    const url = "https://dev-pool.herokuapp.com/api/v1/auth/login";
+    const url = baseUrl+"auth/login";
     //console.log(body);
     //const data = {"email":y, password:x};
     postQuery(url, body)

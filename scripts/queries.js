@@ -29,15 +29,13 @@ function postQuery(url, data) {
    // const url = 'http://localhost:3000/api/v1/questions';
 // const x =  fetch(url);
 // console.log(x);
-// Fetch the original image
-    // Replace ./data.json with your JSON feed
     fetch(url,
         {
             method: 'post',
             headers: {
                 "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
             },
-            body: 'foo=bar&lorem=ipsum'
+            body: ''
         })
         .then(response => {
             return response.json();

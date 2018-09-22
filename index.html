@@ -41,19 +41,20 @@
         <!--<h2 class="featured-heading">Featured question</h2>-->
         <h1 class="featured-question-title" id="featured-question-title"></h1>
         <div>
-            <pre class="featured-question-body" id="featured-question-body"> </pre>
+            <pre class="featured-question-body" id="featured-question-body"></pre>
+            <input type="hidden" name="">
         </div>
 
     <div class="answer-link" id="answer-link">
     <h3>Answer this question</h3>
-    <form action="https://dev-pool.herokuapp.com/api/v1/questions/answers" method="post" class="answer-form">
-        <label for="question_body">Enter your Answer here:</label><br>
-        <textarea name="question" id="question_body">
-                  </textarea>
-        <input type="hidden" name="user_id" id="featured-question-owner-id">
-        <input type="hidden" name="user_id" id="featured-question-id"><br>
-        <button type="submit">Submit</button>
+    <form onsubmit="return false" action="" method="post" class="answer-form">
+        <label for="answer_body">Enter your Answer here:</label><br>
+        <textarea name="answer_body" id="answer-body"></textarea>
+        <input type="hidden" name="user_id" id="featured-question-user-id" value="0">
+        <input type="hidden" name="featured_question_id" id="featured-question-id" value="0"><br>
+        <button type="submit" onclick="saveAnswer()">Submit</button>
     </form>
+    <span class="alert" id="answer-status"></span>
 </div>
 </section>
   <hr>
