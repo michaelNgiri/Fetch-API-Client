@@ -46,8 +46,8 @@
         </div>
 
     <div class="answer-link" id="answer-link">
-    <h3>Answer this question</h3>
-    <form onsubmit="return false" action="" method="post" class="answer-form">
+    <h3 id="answer-title">Answer this question</h3>
+    <form onsubmit="return false" action="" method="post" class="answer-form" id="answer-form">
         <label for="answer_body">Enter your Answer here:</label><br>
         <textarea name="answer_body" id="answer-body"></textarea>
         <input type="hidden" name="user_id" id="featured-question-user-id" value="0">
@@ -55,6 +55,7 @@
         <button type="submit" onclick="saveAnswer()">Submit</button>
     </form>
     <span class="alert" id="answer-status"></span>
+    <button onclick="showAnswerForm()" id="answer-again">Answer Again</button>
 </div>
 </section>
   <hr>

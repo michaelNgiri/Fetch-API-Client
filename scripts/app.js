@@ -49,12 +49,14 @@ fetch(answerUrl,
         }).then(data => {
             if (data['status'] === 200) {
             document.getElementById('answer-body').value = '';
+            document.getElementById('answer-form').style.visibility='hidden';
+            document.getElementById('answer-again').style.visibility='visible';
+            document.getElementById('answer-title').style.visibility='hidden';
             const answerStatus = document.getElementById('answer-status');
-            answerStatus.innerHTML = 'Answer Saved';
-            answerStatus.style.visible='visible';
-            alert('your question was saved succesfully');
+            answerStatus.innerHTML = 'your Answer was saved succesfully';
+            answerStatus.style.visibility='visible';
             }else{
-            alert('could not save your question');
+               alert('could not save your question');
             }
         // Work with JSON data here
         console.log(data['message']);
@@ -64,4 +66,9 @@ fetch(answerUrl,
     });
 
 console.log(answerUrl);
+}
+
+function showAnswerForm(){
+    document.getElementById('answer-form').style.visibility='visible';
+    document.getElementById('answer-again').style.visibility='hidden';
 }

@@ -178,3 +178,7 @@ footer {
 	visibility: hidden;
 	color: green;
 }
+#answer-again{
+	visibility: hidden;
+	background: grey;
+}
