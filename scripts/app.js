@@ -1,5 +1,5 @@
-//const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
-const baseUrl = 'http://localhost:3000/api/v1/';
+const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
+//const baseUrl = 'http://localhost:3000/api/v1/';
 document.addEventListener("DOMContentLoaded", function(){
     fetch(baseUrl+'questions/recent').then(response => {
         return response.json();
