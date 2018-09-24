@@ -1,5 +1,5 @@
-//const baseUrl = 'http://localhost:3000/api/v1/';
-const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
+const baseUrl = 'http://localhost:3000/api/v1/';
+//const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
 
 const authText =  document.getElementById('auth-text');
 let Authorization,

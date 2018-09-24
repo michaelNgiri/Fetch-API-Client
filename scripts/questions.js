@@ -1,5 +1,4 @@
-const title = document.getElementById('ask-question-title').value;
-const question = document.getElementById('question-body').value;
+const url = baseUrl+"questions";
 
     function submitQuestion(){
     const title = document.getElementById('ask-question-title').value;
@@ -8,9 +7,10 @@ const question = document.getElementById('question-body').value;
     console.log(question);
     console.log(Authorization);
     const body =  'question_title'+'='+title+'&'+'question'+'='+question+'&id'+'=1'+'&Authorization'+'='+localStorage.Authorization;
-    const url = baseUrl+"questions";
     postQuery(url, body)
 }
+
+
 
 function postQuery(url, body) {
     if (!('fetch' in window)) {
@@ -36,6 +36,9 @@ function postQuery(url, body) {
         // Do something for an error here
     });
 }
+
+
+
 fetch(url).then(response => {
     return response.json();
 }).then(data => {
@@ -52,8 +55,10 @@ fetch(url).then(response => {
     // Do something for an error here
 });
 
+
+
 function fetchAllQuestions(){
-    fetch('http://https://dev-pool.herokuapp.com/api/v1/questions/').then(response => {
+    fetch(baseUrl+'questions/').then(response => {
         return response.json();
     }).then(data => {
         // Work with JSON data here
@@ -80,14 +85,19 @@ function fetchAllQuestions(){
     });
 }
 
+
+
 function checkValidQuestion(){
  let text;
+ const title = document.getElementById('ask-question-title').value;
+const question = document.getElementById('question-body').value;
+const submitQuestionButton = document.getElementById('ask-question-submit-button');
  
  if (typeof title === '' || typeof question === '') {
     submitQuestionButton.style.cursor='disabled';
  }else{
     submitQuestionButton.style.cursor='default';
     submitQuestionButton.style.background='#0b948d'
- }
+   }
 
  }
