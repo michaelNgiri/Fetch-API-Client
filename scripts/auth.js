@@ -1,5 +1,3 @@
-//const baseUrl = 'http://localhost:3000/api/v1/';
-const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
 
 function submitLogin(){
     const x = document.getElementById('password').value.toString().trim();
@@ -31,9 +29,9 @@ function postQuery(url, body) {
             return response.json();
         }).then(data => {
         // Work with JSON data here
-        Window.Authorization = data.Authorization;
-        console.log(Window.Authorization);
-        authText.innerText="Logout";
+        localStorage.setItem("Authorization", data.Authorization);
+        console.log('you are logged in as:'+localStorage.Authorization);
+        
     }).catch(err => {
         console.log(err);
         // Do something for an error here
@@ -72,9 +70,23 @@ function postSignupQuery(url, body) {
             return response.json();
         }).then(data => {
         alert('Registration succesful');
-        authText.innerText="Logout";
     }).catch(err => {
         console.log(err);
 
     });
+}
+
+function authenticate(){
+    //localStorage.clear();
+    const loginUrl = 'login.html';
+    if (localStorage.Authorization === null) {
+         authText.innerText="Logout";
+        console.log('you are not logged in');
+        self.location.loginUrl;
+    }else{
+        localStorage.removeItem('Authorization');
+         authText.innerText="Login";
+        console.log('you are now logged out');
+
+    }
 }

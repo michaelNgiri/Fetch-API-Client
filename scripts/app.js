@@ -1,13 +1,9 @@
-//const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
-const baseUrl = 'http://localhost:3000/api/v1/';
-const authorization = Window.Authorization
-//"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImVtYWlsIjoibWljaGFlbG5naXJpQGdtYWlsLmNvbSIsImlkIjoxMn0sImlhdCI6MTUzNzYxOTI5OSwiZXhwIjoxNTM3NjQ5Mjk5fQ.Ssrjp6R4GdbRE0CMzZ0HvgV2O73f2hhS9AgCts-GIXI"
 document.addEventListener("DOMContentLoaded", function(){
     fetch(baseUrl+'questions/recent').then(response => {
         return response.json();
     }).then(data => {
         // Work with JSON data here
-        console.log(data[0]);
+        console.log(data);
         getElementById('loading').style.visibility='hidden';
         getElementById('featured-question-title').innerHTML=data[0]['question_title'];
         getElementById('featured-question-body').innerHTML=data[0]['question_body'];
@@ -15,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function(){
         getElementById('featured-question-user-id').setAttribute('value', data[0]['user_id']);
         console.log(data[0]['id']);
         document.getElementById('answer-link').style.visibility='visible';
-        window.questionId = data[0]['id'];
+        id = data[0]['id'];
+        fetchRecentQuestionAnswers(id);
         return data;
     }).catch(err => {
         console.log(err);
@@ -23,7 +20,23 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
+function fetchRecentQuestionAnswers(id){
+        console.log('recent question Id:'+id);
+        console.log('lets fetch the answers to this question');
 
+        const urlPostFix = 'questions/recent/'+id+'/answers';
+        const url = baseUrl+urlPostFix;
+        console.log(url);
+
+        fetch(url).then(response => {
+        return response.json();
+    }).then(data =>{
+            console.log('answers retrieved');
+            console.log(data);
+        }).catch(err=>{
+            console.log('Failed to retrieve answers');
+        });
+}
 
 
 function saveAnswer(questionId) {
