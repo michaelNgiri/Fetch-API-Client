@@ -36,10 +36,10 @@
     <form method="post" onsubmit="return false" class="ask-question-form">
         <label for="ask-question-title">Title</label><br>
         <input type="text" name="question_title" id="ask-question-title"><br>
-        <label for="ask-question-body">Enter your Question here:</label><br>
+        <label id="ask-question-body-label" for="ask-question-body">Enter your Question here:</label><br>
         <textarea name="question" id="ask-question-body" aria-invalid="false"> </textarea>
         <input type="hidden" name="user_id" id="featured-question-id"><br>
-        <button onclick="submitQuestion()">Submit</button>
+        <button id="ask-question-submit-button" onclick="submitQuestion()">Submit</button>
     </form>
 </div>
 
