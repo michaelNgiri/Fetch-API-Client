@@ -7,7 +7,7 @@ const question = document.getElementById('question-body').value;
     console.log(title);
     console.log(question);
     console.log(Authorization);
-    const body =  'question_title'+'='+title+'&'+'question'+'='+question+'&id'+'=1'+'&Authorization'+'='+Authorization;
+    const body =  'question_title'+'='+title+'&'+'question'+'='+question+'&id'+'=1'+'&Authorization'+'='+localStorage.Authorization;
     const url = baseUrl+"questions";
     postQuery(url, body)
 }
