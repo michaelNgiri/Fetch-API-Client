@@ -10,5 +10,5 @@ if(Authorization === null || Authorization === "" || Authorization === undefined
     authText.innerText="Login";
 }else{
     authText.innerText="Logout";
-    console.log(Authorization);
+    //console.log(Authorization);
 }

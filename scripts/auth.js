@@ -30,6 +30,7 @@ function postQuery(url, body) {
         }).then(data => {
         // Work with JSON data here
         localStorage.setItem("Authorization", data.Authorization);
+        authText.innerText="Logout";
         console.log('you are logged in as:'+localStorage.Authorization);
         
     }).catch(err => {
@@ -79,14 +80,14 @@ function postSignupQuery(url, body) {
 function authenticate(){
     //localStorage.clear();
     const loginUrl = 'login.html';
-    if (localStorage.Authorization === null) {
-         authText.innerText="Logout";
-        console.log('you are not logged in');
-        self.location.loginUrl;
-    }else{
+    if (Authorization != null) {
         localStorage.removeItem('Authorization');
          authText.innerText="Login";
         console.log('you are now logged out');
 
+    }else{
+         authText.innerText="Logout";
+        console.log('you are not logged in');
+        self.location.href = loginUrl;
     }
 }

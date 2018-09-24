@@ -5,7 +5,7 @@ function submitQuestion(){
     console.log(question);
     console.log(Authorization);
     const body =  'question_title'+'='+title+'&'+'question'+'='+question+'&id'+'=1'+'&Authorization'+'='+Authorization;
-    const url = "https://dev-pool.herokuapp.com/api/v1/questions";
+    const url = baseUrl+"questions";
     postQuery(url, body)
 }
 
