@@ -35,18 +35,18 @@
     <h3>Ask a question</h3>
     <form method="post" onsubmit="return false" class="ask-question-form">
         <label for="ask-question-title">Title</label><br>
-        <input type="text" name="question_title" id="ask-question-title"><br>
+        <input onchange="checkValidQuestion()"  type="text" name="question_title" id="ask-question-title"><br>
         <label id="ask-question-body-label" for="ask-question-body">Enter your Question here:</label><br>
-        <textarea name="question" id="ask-question-body" aria-invalid="false"> </textarea>
+        <textarea onchange="checkValidQuestion()" name="question" id="question-body" aria-invalid="false"> </textarea>
         <input type="hidden" name="user_id" id="featured-question-id"><br>
-        <button id="ask-question-submit-button" onclick="submitQuestion()">Submit</button>
+        <button id="ask-question-submit-button" disabled="true" onclick="submitQuestion()">Submit</button>
     </form>
 </div>
 
 
 <script  type="text/javascript" src="scripts/queries.js"></script>
 <script  type="text/javascript" src="scripts/questions.js"></script>
-<!--<script  type="text/javascript" src="scripts/app.js"></script>-->
+<!-- <script  type="text/javascript" src="scripts/app.js"></script> -->
 <script defer type="text/javascript" src="scripts/misc.js"></script>
 </body>
 </html>

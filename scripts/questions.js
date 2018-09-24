@@ -1,6 +1,9 @@
-function submitQuestion(){
+const title = document.getElementById('ask-question-title').value;
+const question = document.getElementById('question-body').value;
+
+    function submitQuestion(){
     const title = document.getElementById('ask-question-title').value;
-    const question = document.getElementById('ask-question-body').value;
+    const question = document.getElementById('question-body').value;
     console.log(title);
     console.log(question);
     console.log(Authorization);
@@ -76,3 +79,15 @@ function fetchAllQuestions(){
         // Do something for an error here
     });
 }
+
+function checkValidQuestion(){
+ let text;
+ 
+ if (typeof title === '' || typeof question === '') {
+    submitQuestionButton.style.cursor='disabled';
+ }else{
+    submitQuestionButton.style.cursor='default';
+    submitQuestionButton.style.background='#0b948d'
+ }
+
+ }

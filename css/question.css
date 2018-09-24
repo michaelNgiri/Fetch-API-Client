@@ -9,7 +9,7 @@ border-style: ridge;
 width: 20vw;
 height: 2em
 }
-#ask-question-body{
+#question-body{
 	width: 60vw;
 	height: 10em;
 	border-radius: 8px;
@@ -20,10 +20,10 @@ height: 2em
 #ask-question-submit-button{
 	/*float: right;*/
 	padding: 1em 2em 1em 2em;
-	background: #20b2aa;
+/*	background: #0b948d;*/
 	border-radius: 6px;
 }
 #ask-question-submit-button:hover{
-	background: #1a5f5b;
-	cursor: grab;
+	background: #f3f3f3;
+	cursor: not-allowed;
 }
