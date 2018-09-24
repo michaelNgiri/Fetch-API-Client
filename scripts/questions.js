@@ -1,19 +1,5 @@
 const url = baseUrl+"questions";
 
-    function submitQuestion(){
-    const title = document.getElementById('ask-question-title').value;
-    const question = document.getElementById('question-body').value;
-    console.log(title);
-    console.log(question);
-    console.log(Authorization);
-    const body =  'question_title'+'='+title+'&'+'question'+'='+question+'&id'+'=1'+'&Authorization'+'='+localStorage.Authorization;
-    postQuery(url, body)
-}
-
-
-
-
-
 
 fetch(url).then(response => {
     return response.json();
