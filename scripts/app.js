@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
+    
     fetch(baseUrl+'questions/recent').then(response => {
         return response.json();
     }).then(data => {

@@ -1,5 +1,6 @@
 const baseUrl = 'http://localhost:3000/api/v1/';
 //const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
+
 const authText =  document.getElementById('auth-text');
 let Authorization,
     userId=1,
@@ -18,3 +19,5 @@ if(Authorization === null || Authorization === "" || Authorization === undefined
 function setProfileTitle(argument) {
 	document.title = localStorage.firstName+' '+localStorage.lastName+"'s profile | StackOverflow-Lite";
 }
+
+
