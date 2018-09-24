@@ -12,3 +12,9 @@ if(Authorization === null || Authorization === "" || Authorization === undefined
     authText.innerText="Logout";
     //console.log(Authorization);
 }
+
+
+//set title for profile page
+function setProfileTitle(argument) {
+	document.title = localStorage.firstName+' '+localStorage.lastName+"'s profile | StackOverflow-Lite";
+}
