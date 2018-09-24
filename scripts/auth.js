@@ -87,16 +87,20 @@ function postSignupQuery(url, body) {
 }
 
 function authenticate(){
-    //localStorage.clear();
     const loginUrl = 'login.html';
+    const logoutRedirect = 'index.html';
+
     if (Authorization != null) {
-        localStorage.removeItem('Authorization');
+        localStorage.clear();
          authText.innerText="Login";
         console.log('you are now logged out');
+        self.location.href = logoutRedirect;
+        //location.reload;
 
     }else{
-         authText.innerText="Logout";
+         authText.innerText="Login";
         console.log('you are not logged in');
+        console.log(localStorage);
         self.location.href = loginUrl;
     }
 }
