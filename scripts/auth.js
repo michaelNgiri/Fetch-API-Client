@@ -1,27 +1,28 @@
 
 function submitLogin(){
-    const x = document.getElementById('password').value.toString().trim();
-    const y = document.getElementById('email').value.toString().trim();
+    const password = document.getElementById('password').value.toString().trim();
+    const email = document.getElementById('email').value.toString().trim();
     //console.log(x);
    // console.log(y);
-    const body =  'email'+'='+y+'&'+'password'+'='+x;
-    const url = baseUrl+"auth/login";
-    const requestHeader = "Content-type": "application/x-www-form-urlencoded; charset=UTF-8";
+    const body =  'email'+'='+email+'&'+'password'+'='+password;
+    const loginUrl = baseUrl+"auth/login";
     //console.log(body);
     //const data = {"email":y, password:x};
-    postQuery(url, body, requestHeader);
+    postQuery(loginUrl, body)
 }
 
-function postQuery(url, body) {
+function postQuery(loginUrl, body) {
     if (!('fetch' in window)) {
         console.log('Fetch API not found, try including the polyfill');
         alert('fetch is disabled in your browser');
         return;
     }
-    fetch(url,
+    fetch(loginUrl,
         {
             method: 'post',
-            headers: { requestHeader },
+            headers: {
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
             body:body
         })
         .then(response => {
