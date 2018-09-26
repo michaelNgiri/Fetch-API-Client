@@ -6,9 +6,10 @@ function submitLogin(){
    // console.log(y);
     const body =  'email'+'='+y+'&'+'password'+'='+x;
     const url = baseUrl+"auth/login";
+    const requestHeader = "Content-type": "application/x-www-form-urlencoded; charset=UTF-8";
     //console.log(body);
     //const data = {"email":y, password:x};
-    postQuery(url, body)
+    postQuery(url, body, requestHeader);
 }
 
 function postQuery(url, body) {
@@ -20,9 +21,7 @@ function postQuery(url, body) {
     fetch(url,
         {
             method: 'post',
-            headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-            },
+            headers: { requestHeader },
             body:body
         })
         .then(response => {
