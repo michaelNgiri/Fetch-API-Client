@@ -69,20 +69,9 @@ fetch(answerUrl,
             return response.json();
         }).then(data => {
             if (data['status'] === 200) {
-            findDom('answer-body').value = '';
-            findDom('answer-form').style.visibility='hidden';
-            findDom('answer-again').style.visibility='visible';
-            findDom('answer-title').style.visibility='hidden';
-            const answerStatus = findDom('answer-status');
-                    answerStatus.innerHTML = 'your Answer was saved succesfully';
-                    answerStatus.style.color='green';  
-                    answerStatus.style.visibility='visible';
+            indicateSuccess();
             }else{
-               findDom('answer-status').style.color='red';
-               findDom('answer-body').style.border='1px solid red';
-               const answerStatus = findDom('answer-status'); 
-                        answerStatus.innerHTML = 'Failed to save! Login and try again';
-                        answerStatus.style.visibility='visible';
+               indicateError();
             }
         // Work with JSON data here
         console.log(data['message']);
@@ -108,3 +97,21 @@ function showAnswerForm(){
     findDom('answer-again').style.visibility='hidden';
 }
 
+function indicateSuccess(){
+    findDom('answer-body').value = '';
+            findDom('answer-form').style.visibility='hidden';
+            findDom('answer-again').style.visibility='visible';
+            findDom('answer-title').style.visibility='hidden';
+            const answerStatus = findDom('answer-status');
+                    answerStatus.innerHTML = 'your Answer was saved succesfully';
+                    answerStatus.style.color='green';  
+                    answerStatus.style.visibility='visible';
+}
+
+function indicateError(){
+    findDom('answer-status').style.color='red';
+               findDom('answer-body').style.border='1px solid red';
+               const answerStatus = findDom('answer-status'); 
+                        answerStatus.innerHTML = 'Failed to save! Login and try again';
+                        answerStatus.style.visibility='visible';
+}
