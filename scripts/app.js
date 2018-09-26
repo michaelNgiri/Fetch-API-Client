@@ -40,22 +40,16 @@ function fetchRecentQuestionAnswers(id){
 }
 
 
-function saveAnswer(questionId) {
- questionId = findDom('featured-question-id').value;
-console.log(questionId);
- const userId = findDom('featured-question-user-id').value;
- console.log(userId);
- const answer = findDom('answer-body').value;
- console.log(answer);
 
+
+function saveAnswer(questionId) {
+     questionId = findDom('featured-question-id').value;
+ const userId = findDom('featured-question-user-id').value;
+ const answer = findDom('answer-body').value;
  const answerUrl = baseUrl+'questions/answers';
 const queryBody = 'question_id='+questionId+'&user_id='+userId+'&answer='+answer;
-console.log(queryBody);
-
 //check if valid characters are entered in answer text
  if (typeof answer === "string" && answer.trim().length >= 5) {
-
-
 fetch(answerUrl,
         {
             method: 'post',
@@ -73,21 +67,12 @@ fetch(answerUrl,
             }else{
                indicateError();
             }
-        // Work with JSON data here
-        console.log(data['message']);
     }).catch(err => {
         console.log(err);
         // Do something for an error here
     });
-
-console.log(answerUrl);
-
 }else{
-    console.log('invalid answer text');
-    const answerStatus = findDom('answer-status');
-            answerStatus.innerHTML = 'please type at least 5 characters';
-            answerStatus.style.color='orange';
-            answerStatus.style.visibility='visible';
+    showAnswerSaveError();
 }
 }
 
@@ -114,4 +99,12 @@ function indicateError(){
                const answerStatus = findDom('answer-status'); 
                         answerStatus.innerHTML = 'Failed to save! Login and try again';
                         answerStatus.style.visibility='visible';
+}
+
+function showAnswerSaveError(){
+    console.log('invalid answer text');
+    const answerStatus = findDom('answer-status');
+            answerStatus.innerHTML = 'please type at least 5 characters';
+            answerStatus.style.color='orange';
+            answerStatus.style.visibility='visible';
 }
