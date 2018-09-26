@@ -1,7 +1,7 @@
 //const baseUrl = 'http://localhost:3000/api/v1/';
 const baseUrl = 'https://dev-pool.herokuapp.com/api/v1/';
 
-const authText =  document.getElementById('auth-text');
+const authText =  findDom('auth-text');
 let Authorization,
     userId=1,
     questionId ,
@@ -40,4 +40,8 @@ function postQuery(url, body) {
     });
 }
 
+function findDom(id){
+  const dom =  document.getElementById(id);
+  return dom;
+}
 
