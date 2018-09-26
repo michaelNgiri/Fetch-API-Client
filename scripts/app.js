@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function(){
     }).then(data => {
         // Work with JSON data here
         console.log(data);
-        getElementById('loading').style.visibility='hidden';
-        getElementById('featured-question-title').innerHTML=data[0]['question_title'];
-        getElementById('featured-question-body').innerHTML=data[0]['question_body'];
-        getElementById('featured-question-id').setAttribute('value', data[0]['id']);
-        getElementById('featured-question-user-id').setAttribute('value', data[0]['user_id']);
+        findDom('loading').style.visibility='hidden';
+        findDom('featured-question-title').innerHTML=data[0]['question_title'];
+        findDom('featured-question-body').innerHTML=data[0]['question_body'];
+        findDom('featured-question-id').setAttribute('value', data[0]['id']);
+        findDom('featured-question-user-id').setAttribute('value', data[0]['user_id']);
         console.log(data[0]['id']);
-        document.getElementById('answer-link').style.visibility='visible';
+        findDom('answer-link').style.visibility='visible';
         id = data[0]['id'];
         fetchRecentQuestionAnswers(id);
         return data;
@@ -41,11 +41,11 @@ function fetchRecentQuestionAnswers(id){
 
 
 function saveAnswer(questionId) {
- questionId = getElementById('featured-question-id').value;
+ questionId = findDom('featured-question-id').value;
 console.log(questionId);
- const userId = getElementById('featured-question-user-id').value;
+ const userId = findDom('featured-question-user-id').value;
  console.log(userId);
- const answer = getElementById('answer-body').value;
+ const answer = findDom('answer-body').value;
  console.log(answer);
 
  const answerUrl = baseUrl+'questions/answers';
@@ -69,20 +69,9 @@ fetch(answerUrl,
             return response.json();
         }).then(data => {
             if (data['status'] === 200) {
-            getElementById('answer-body').value = '';
-            getElementById('answer-form').style.visibility='hidden';
-            getElementById('answer-again').style.visibility='visible';
-            getElementById('answer-title').style.visibility='hidden';
-            const answerStatus = getElementById('answer-status');
-                    answerStatus.innerHTML = 'your Answer was saved succesfully';
-                    answerStatus.style.color='green';  
-                    answerStatus.style.visibility='visible';
+            indicateSuccess();
             }else{
-               getElementById('answer-status').style.color='red';
-               getElementById('answer-body').style.border='1px solid red';
-               const answerStatus = getElementById('answer-status'); 
-                        answerStatus.innerHTML = 'Failed to save! Login and try again';
-                        answerStatus.style.visibility='visible';
+               indicateError();
             }
         // Work with JSON data here
         console.log(data['message']);
@@ -95,7 +84,7 @@ console.log(answerUrl);
 
 }else{
     console.log('invalid answer text');
-    const answerStatus = getElementById('answer-status');
+    const answerStatus = findDom('answer-status');
             answerStatus.innerHTML = 'please type at least 5 characters';
             answerStatus.style.color='orange';
             answerStatus.style.visibility='visible';
@@ -104,11 +93,25 @@ console.log(answerUrl);
 
 
 function showAnswerForm(){
-    getElementById('answer-form').style.visibility='visible';
-    getElementById('answer-again').style.visibility='hidden';
+    findDom('answer-form').style.visibility='visible';
+    findDom('answer-again').style.visibility='hidden';
 }
 
-function getElementById(id){
-  const dom =  document.getElementById(id);
-  return dom;
+function indicateSuccess(){
+    findDom('answer-body').value = '';
+            findDom('answer-form').style.visibility='hidden';
+            findDom('answer-again').style.visibility='visible';
+            findDom('answer-title').style.visibility='hidden';
+            const answerStatus = findDom('answer-status');
+                    answerStatus.innerHTML = 'your Answer was saved succesfully';
+                    answerStatus.style.color='green';  
+                    answerStatus.style.visibility='visible';
+}
+
+function indicateError(){
+    findDom('answer-status').style.color='red';
+               findDom('answer-body').style.border='1px solid red';
+               const answerStatus = findDom('answer-status'); 
+                        answerStatus.innerHTML = 'Failed to save! Login and try again';
+                        answerStatus.style.visibility='visible';
 }

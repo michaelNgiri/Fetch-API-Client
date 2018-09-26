@@ -29,18 +29,7 @@ function postQuery(url, body) {
             return response.json();
         }).then(data => {
         // Work with JSON data here
-        localStorage.setItem("Authorization", data.Authorization);
-        localStorage.setItem("userID", data.user['id']);
-        localStorage.setItem("email", data.user['email']);
-        localStorage.setItem("firstName", data.user['firstName']);
-        localStorage.setItem("lastName", data.user['lastName']);
-        console.log(data.user);
-        authText.innerText="Logout";
-        console.log('you are logged in as:'+localStorage.Authorization);
-        console.log('id:'+localStorage.userID);
-        console.log("email:"+localStorage.email);
-        console.log("firstName: "+localStorage.firstName);
-        console.log('lastName: '+localStorage.lastName);
+        saveToLocalStorage(data);
         
     }).catch(err => {
         console.log(err);
@@ -103,4 +92,14 @@ function authenticate(){
         console.log(localStorage);
         self.location.href = loginUrl;
     }
+}
+
+
+function saveToLocalStorage(data){
+    localStorage.setItem("Authorization", data.Authorization);
+        localStorage.setItem("userID", data.user['id']);
+        localStorage.setItem("email", data.user['email']);
+        localStorage.setItem("firstName", data.user['firstName']);
+        localStorage.setItem("lastName", data.user['lastName']);
+        authText.innerText="Logout";
 }

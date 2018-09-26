@@ -25,5 +25,8 @@ height: 2em
 }
 #ask-question-submit-button:hover{
 	background: #f3f3f3;
-	cursor: not-allowed;
+	/*cursor: not-allowed;*/
+}
+#saving-question-text{
+	visibility: hidden;
 }
