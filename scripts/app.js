@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", function(){
+
+ const answerUrl = baseUrl+'questions/answers';
+
+ document.addEventListener("DOMContentLoaded", function(){
     
     fetch(baseUrl+'questions/recent').then(response => {
         return response.json();
@@ -46,7 +49,6 @@ function saveAnswer(questionId) {
      questionId = findDom('featured-question-id').value;
  const userId = findDom('featured-question-user-id').value;
  const answer = findDom('answer-body').value;
- const answerUrl = baseUrl+'questions/answers';
 const queryBody = 'question_id='+questionId+'&user_id='+userId+'&answer='+answer;
 //check if valid characters are entered in answer text
  if (typeof answer === "string" && answer.trim().length >= 5) {
@@ -54,12 +56,10 @@ fetch(answerUrl,
         {
             method: 'post',
             headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
-                "authorization": localStorage.Authorization
+                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8","authorization": localStorage.Authorization
             },
             body: queryBody
-        })
-        .then(response => {
+        }).then(response => {
             return response.json();
         }).then(data => {
             if (data['status'] === 200) {
@@ -69,12 +69,12 @@ fetch(answerUrl,
             }
     }).catch(err => {
         console.log(err);
-        // Do something for an error here
     });
 }else{
     showAnswerSaveError();
-}
-}
+}}
+
+
 
 
 function showAnswerForm(){
