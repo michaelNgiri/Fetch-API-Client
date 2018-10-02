@@ -1,41 +1,6 @@
-const title = document.getElementById('ask-question-title').value;
-const question = document.getElementById('question-body').value;
+const url = baseUrl+"questions";
 
-    function submitQuestion(){
-    const title = document.getElementById('ask-question-title').value;
-    const question = document.getElementById('question-body').value;
-    console.log(title);
-    console.log(question);
-    console.log(Authorization);
-    const body =  'question_title'+'='+title+'&'+'question'+'='+question+'&id'+'=1'+'&Authorization'+'='+localStorage.Authorization;
-    const url = baseUrl+"questions";
-    postQuery(url, body)
-}
 
-function postQuery(url, body) {
-    if (!('fetch' in window)) {
-        console.log('Fetch API not found, try including the polyfill');
-        alert('fetch is disabled in your browser');
-        return;
-    }
-    fetch(url,
-        {
-            method: 'post',
-            headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-            },
-            body:body
-        })
-        .then(response => {
-            return response.json();
-        }).then(data => {
-        // Work with JSON data here
-        Authorization = data
-    }).catch(err => {
-        console.log(err);
-        // Do something for an error here
-    });
-}
 fetch(url).then(response => {
     return response.json();
 }).then(data => {
@@ -52,8 +17,10 @@ fetch(url).then(response => {
     // Do something for an error here
 });
 
+
+
 function fetchAllQuestions(){
-    fetch('http://https://dev-pool.herokuapp.com/api/v1/questions/').then(response => {
+    fetch(baseUrl+'questions/').then(response => {
         return response.json();
     }).then(data => {
         // Work with JSON data here
@@ -80,14 +47,5 @@ function fetchAllQuestions(){
     });
 }
 
-function checkValidQuestion(){
- let text;
- 
- if (typeof title === '' || typeof question === '') {
-    submitQuestionButton.style.cursor='disabled';
- }else{
-    submitQuestionButton.style.cursor='default';
-    submitQuestionButton.style.background='#0b948d'
- }
 
- }
+
