@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans:400,700');
+
+
 a:-webkit-any-link {
     color: #000000;
     cursor: grab;
@@ -11,11 +14,13 @@ body {
   height: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
 
 body {
-  font-size: 12px;
-  font-family: monospace;
-  color:inherit;
+  font-family: 'Encode Sans', sans-serif;
 }
 
 .featured-question-title{
@@ -98,12 +103,14 @@ footer {
 .menus{
     display: inline-flex; list-style: none; text-decoration: none;
 }
-.login-form{
-    float: contour;
-    text-align: center;
-    border: 24px solid whitesmoke;
-    border-radius: 10%;
+
+/* Login/Registration Form */
+
+.login-form {
+  max-width: 420px;
+  width: 100%;
 }
+
 /*featured-skills heading*/
 
 .featured-heading {

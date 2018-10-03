@@ -1,61 +1,90 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <title>StackOverflow Lite</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" media="screen and (min-width: 850px)" href="css/bpmin850.css">
-  <link rel="stylesheet" media="screen and (min-width: 200px) and (max-width: 700px)" href="css/small_screen.css">
-  <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 700px)" href="css/medium_screen.css">
+  <link rel="stylesheet" media="screen and (min-width: 200px) and (max-width: 700px)"
+    href="css/small_screen.css">
+  <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 700px)"
+    href="css/medium_screen.css">
 
 </head>
+
 <body>
   <!-- header of the page-->
 
-  <header class="page-header">
-    <div class="inner-header">
-        <!--<img id="avatar" src="img/avatar.jpg" alt="profile photo">-->
-        <a href="https://devpool-client.herokuapp.com/"><img class="profile-pic" src="img/avatar.jpg" alt="profile photo"></a>
-      <div class="intro-summary">
-        <p class="name"><!--heading-->
-          <ul class="menus">
-              <li role="menuitem"><a href="profile.html"><span class="menu-item">My Profile</span></a></li>
-              <li><a href="ask-question.html"><span class="menu-item">Ask a question</span></a></li>
-              <li><a href="my-questions.html"><span class="menu-item">My Questions</span></a></li>
-              <li><a onclick="authenticate()"><span class="menu-item" id="auth-text"></span></a></li>
-          <li><a href="signup.html"><span class="menu-item" id="auth-signup-text">Register</span></a></li>
-          </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand font-weight-bold" href="/">StackOverflow Lite</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">My Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ask-question.html">Ask a Question</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="my-questions.html">My Questions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="all-questions.html">All Questions</a>
+        </li>
+        <li class="nav-item"></li>
+        <a class="font-weight-bold nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="font-weight-bold nav-link" href="signup.html">Sign Up</a>
+        </li>
+      </ul>
     </div>
-  </header>
+  </nav>
 
   <!---->
-  <hr class="hr">
-<section>
+  <section>
 
-   
-        <!--heading-->
-        <!--<h2 class="featured-heading">Featured question</h2>-->
-        <h1 class="featured-question-title" id="featured-question-title"></h1>
-        <div>
-            <pre class="featured-question-body" id="featured-question-body"></pre>
-            <input type="hidden" name="">
-        </div>
-        <div id="loading"> Please wait ... </div>
+
+    <!--heading-->
+    <!--<h2 class="featured-heading">Featured question</h2>-->
+    <h1 class="featured-question-title" id="featured-question-title"></h1>
+    <div>
+      <pre class="featured-question-body" id="featured-question-body"></pre>
+      <input type="hidden" name="">
+    </div>
+    <div id="loading"> Please wait ... </div>
     <div class="answer-link" id="answer-link">
-    <h3 id="answer-title">Answer this question</h3>
-    <form onsubmit="return false" action="" method="post" class="answer-form" id="answer-form">
-        <label for="answer_body">Enter your Answer here:</label><br>
+      <h3 id="answer-title">Answer this question</h3>
+      <form onsubmit="return false" action="" method="post" class="answer-form" id="answer-form">
+        <label for="answer_body">Enter your Answer here:</label>
+        <br>
         <textarea name="answer_body" id="answer-body"></textarea>
         <input type="hidden" name="user_id" id="featured-question-user-id" value="0">
-        <input type="hidden" name="featured_question_id" id="featured-question-id" value="0"><br>
+        <input type="hidden" name="featured_question_id" id="featured-question-id" value="0">
+        <br>
         <button type="submit" onclick="saveAnswer()">Submit</button>
-    </form>
-    <span class="alert" id="answer-status"></span>
-    <button onclick="showAnswerForm()" id="answer-again">Answer Again</button>
-</div>
-</section>
+      </form>
+      <span class="alert" id="answer-status"></span>
+      <button onclick="showAnswerForm()" id="answer-again">Answer Again</button>
+    </div>
+  </section>
   <hr>
   <!--main content-->
   <main class="main-content">
@@ -65,7 +94,7 @@
     </div>
     <!--All featured skills-->
     <section class="featured-skills">
-     
+
 
     </section>
   </main>
@@ -82,4 +111,5 @@
   <script defer type="text/javascript" src="scripts/main.js"></script>
   <script defer type="text/javascript" src="scripts/auth.js"></script>
 </body>
+
 </html>
