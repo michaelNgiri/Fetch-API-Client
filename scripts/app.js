@@ -50,7 +50,7 @@ function saveAnswer(questionId) {
     /**
      * check if valid characters are entered in answer text
      */
-    if (!answer || typeof answer !== "string" || answer.trim().length < 5) {
+    if (invalidAnswer(answer)) {
         showAnswerSaveError();
         return;
     }
@@ -73,6 +73,10 @@ function saveAnswer(questionId) {
             data['status'] === 200 ? indicateSuccess() : indicateError();
         })
         .catch(err => {console.log(err)});
+}
+
+function invalidAnswer(answer) {
+    return !answer || typeof answer !== "string" || answer.trim().length < 5;
 }
 
 
