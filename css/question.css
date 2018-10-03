@@ -4,11 +4,10 @@
 }
 #ask-question-title{
 margin-bottom: 2em;
-border-radius: 4px;
-border-style: ridge;
 width: 20vw;
 height: 2em
 }
+
 #question-body{
 	width: 60vw;
 	height: 10em;
