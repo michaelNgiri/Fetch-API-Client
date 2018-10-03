@@ -46,33 +46,34 @@ function fetchRecentQuestionAnswers(id){
 
 
 function saveAnswer(questionId) {
-     questionId = findDom('featured-question-id').value;
- const userId = findDom('featured-question-user-id').value;
- const answer = findDom('answer-body').value;
-const queryBody = 'question_id='+questionId+'&user_id='+userId+'&answer='+answer;
-//check if valid characters are entered in answer text
- if (typeof answer === "string" && answer.trim().length >= 5) {
-fetch(answerUrl,
-        {
-            method: 'post',
-            headers: {
-                "Content-type": "application/x-www-form-urlencoded; charset=UTF-8","authorization": localStorage.Authorization
-            },
-            body: queryBody
-        }).then(response => {
-            return response.json();
-        }).then(data => {
-            if (data['status'] === 200) {
-            indicateSuccess();
-            }else{
-               indicateError();
-            }
-    }).catch(err => {
-        console.log(err);
-    });
-}else{
-    showAnswerSaveError();
-}}
+    const answer = findDom('answer-body').value;
+    /**
+     * check if valid characters are entered in answer text
+     */
+    if (!answer || typeof answer !== "string" || answer.trim().length < 5) {
+        showAnswerSaveError();
+        return;
+    }
+
+    questionId = findDom('featured-question-id').value;
+    const userId = findDom('featured-question-user-id').value;
+    const queryBody = 'question_id='+questionId+'&user_id='+userId+'&answer='+answer;
+    const bodyRequest = {
+        method: 'post',
+        headers: {
+            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "authorization": localStorage.Authorization
+        },
+        body: queryBody
+    };
+
+    fetch(answerUrl, bodyRequest)
+        .then(response => response.json())
+        .then(data => {
+            data['status'] === 200 ? indicateSuccess() : indicateError();
+        })
+        .catch(err => {console.log(err)});
+}
 
 
 
