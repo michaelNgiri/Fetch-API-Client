@@ -2,8 +2,6 @@
 function submitLogin(){
     const password = document.getElementById('password').value.toString().trim();
     const email = document.getElementById('email').value.toString().trim();
-    //console.log(x);
-   // console.log(y);
     const body =  'email'+'='+email+'&'+'password'+'='+password;
     const loginUrl = baseUrl+"auth/login";
     //console.log(body);
@@ -40,14 +38,11 @@ function postQuery(loginUrl, body) {
 function submitSignup(){
     const firstName = document.getElementById('reg-first_name').value.toString().trim();
     const lastName = document.getElementById('reg-last_name').value.toString().trim();
-    const x = document.getElementById('reg-password').value.toString().trim();
-    const y = document.getElementById('reg-email').value.toString().trim();
-    //console.log(x);
-    // console.log(y);
-    const body =  'email'+'='+y+'&'+'password'+'='+x+'&'+'first_name'+'='+firstName+'&'+'last_name'+'='+lastName;
+    const regPassword = document.getElementById('reg-password').value.toString().trim();
+    const regEmail = document.getElementById('reg-email').value.toString().trim();
+    const body =  'email'+'='+regEmail+'&'+'password'+'='+x+'&'+'first_name'+'='+firstName+'&'+'last_name'+'='+lastName;
     const url = "http://dev-pool.herokuapp.com/api/v1/auth/signup";
     console.log(body);
-    //const data = {"email":y, password:x};
     postSignupQuery(url, body)
 }
 function postSignupQuery(url, body) {
@@ -75,6 +70,8 @@ function postSignupQuery(url, body) {
     });
 }
 
+
+//logout the user if the user is already logged in
 function authenticate(){
     const loginUrl = 'login.html';
     const logoutRedirect = 'index.html';
