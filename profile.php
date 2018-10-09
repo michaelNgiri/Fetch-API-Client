@@ -68,7 +68,7 @@
                     $firstname = $_POST['firstname'];
                     $lastname = $_POST['lastname']; 
                     // display the results
-                    echo 'Welcome ' . $firsname . ' ' . $lastname;
+                    echo 'Welcome ' . $firstname . ' ' . $lastname;
                     exit;
                 </span>
             </div>
