@@ -63,7 +63,7 @@
             <div class="Profile">
                 <span>
                     // Check if the form is submitted if 
-                    ( isset( $_POST['submit'] ) ) 
+                    isset( $_POST['submitSignup()']  
                     // retrieve the form data by using the element's name attributes value as key 
                     $firstname = $_POST['firstname'];
                     $lastname = $_POST['lastname']; 
