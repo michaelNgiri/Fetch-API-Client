@@ -61,7 +61,16 @@
     <div class="container pt-3">
         <div class="col">
             <div class="Profile">
-                <span></span>
+                <span>
+                    // Check if the form is submitted if 
+                    isset( $_POST['submitSignup()']  
+                    // retrieve the form data by using the element's name attributes value as key 
+                    $firstname = $_POST['firstname'];
+                    $lastname = $_POST['lastname']; 
+                    // display the results
+                    echo 'Welcome ' . $firstname . ' ' . $lastname;
+                    exit;
+                </span>
             </div>
         </div>
     </div>
